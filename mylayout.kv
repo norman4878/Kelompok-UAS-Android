@@ -1,0 +1,52 @@
+MylayoutForm:
+
+<MylayoutForm@MDBoxLayout>:
+    orientation: 'vertical'
+    txtUsername_ : txtUsername
+    txtPassword_ : txtPassword
+    btnLogin_ : btnLogin
+	btn_Signup: btnSignup
+    scr_mngr_ : scr_mngr
+
+    ScreenManager:
+        id: scr_mngr
+        Screen:
+            name: 'screenLogin'
+                            
+            BoxLayout:
+                height: "40dp"
+                size_hint_y:None
+
+                TextInput:
+                    id: txtUsername
+                    size_hint_x: 50
+                    text: "Username"
+                TextInput:
+                    id: txtPassword           
+                    text: "Password"
+                    size_hint_x: 50   
+                Button:
+                    id: btnLogin 
+                    text: "Login"
+                    size_hint_x: 25
+                    on_press: root.doLogin()   
+        Screen:
+            name: 'screenSignup'             
+
+			BoxLayout:
+                height: "40dp"
+                size_hint_y:None
+
+                TextInput:
+                    id: txtUsername
+                    size_hint_x: 50
+                    text: "Username"
+                TextInput:
+                    id: txtPassword           
+                    text: "Password"
+                    size_hint_x: 50   
+                Button:
+                    id: btnLogin 
+                    text: "Login"
+                    size_hint_x: 25
+                    on_press: root.doLogin()
